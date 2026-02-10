@@ -1,0 +1,412 @@
+/* BASE */
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+.header {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    max-width: 1200px;
+    padding-top: 32px;
+    padding-bottom: 34px;
+    margin: 20px auto;
+    background-color: #18427c;
+}
+
+.header-logo {
+    width: 80px;
+    height: auto;
+    position: absolute;
+    padding-bottom: 20px;
+    padding-top: 24px;
+    left: 90px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* VIDEO */
+.hero {
+    margin-top: 20px;
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero-container {
+    position: relative;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    z-index: 2;
+    border-radius: 24px;
+    transform: translateY(-160px);
+}
+
+.hero-title {
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 2.3px;
+}
+
+/* IMPORTANTE: o header precisa permitir o dropdown "sair" */
+.header {
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+}
+
+.nav-arrow {
+    transition: transform .25s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 170px;
+
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all .2s ease;
+
+    z-index: 9999;
+    /* isso evita ficar atrás */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #18427c;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* hover funciona tanto no li quanto quando o mouse entra no menu */
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown:hover .nav-arrow,
+.nav-dropdown:focus-within .nav-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-login {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 90px;
+    top: 32px;
+}
+
+/* Serviços */
+.services {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #18427c;
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.service-card h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-button {
+    margin-top: auto;
+    padding: 10px 18px;
+    background-color: #1e6de8;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+
+/* Sobre nos */
+.about {
+    padding: 100px 20px;
+    background-color: #f7f9fc;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #18427c;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.about-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 92px;
+}
+
+.about-highlights li {
+    font-size: 16px;
+    margin-bottom: 14px;
+    padding-left: 12px;
+    border-left: 3px solid #18427c;
+}
+
+/* Contato */
+
+.contact {
+    padding: 80px 20px;
+    background-color: #f7f9fc;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #18427c;
+}
+
+
+.contact-grid {
+    /* centraliza e limita largura; grid com 4 colunas para desktop */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.contact-card {
+    /* Card como um bloco flex vertical: ícone no topo, depois título e descrição
+       display:flex permite alinhar verticalmente e controlar espaçamento consistente */
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-decoration: none;
+    color: #333; /* cor de texto padrão; ícone usará currentColor */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 210px; /* garante altura consistente */
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.14);
+}
+
+/* Wrapper fixo para o ícone: mantém layout estável mesmo que SVGs tenham viewBox diferentes */
+.contact-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: #f0f4f8; /* leve fundo para destaque */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* centralizado pelo flex do card */
+    flex: 0 0 auto;
+    color: #18427c; /* cor padrão do ícone (usa currentColor) */
+}
+
+/* Garante que qualquer SVG dentro do wrapper seja do mesmo tamanho e siga a cor via currentColor */
+.contact-icon svg {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+/* Alguns SVGs têm atributos de fill; esta regra força os paths a usarem currentColor
+   para que a cor seja controlada pelo CSS `.contact-card` ou `.contact-icon` */
+.contact-icon svg path,
+.contact-icon svg circle,
+.contact-icon svg rect {
+    fill: currentColor;
+}
+
+.contact-card h3 {
+    margin: 0;
+    color: #18427c; /* título institucional */
+    font-size: 18px;
+}
+
+.contact-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* Cores por plataforma: controlam o `currentColor` dos ícones */
+.contact-card.whatsapp .contact-icon { color: #25D366; }
+.contact-card.instagram .contact-icon { color: #C13584; }
+.contact-card.facebook .contact-icon { color: #1877F2; }
+.contact-card.maps .contact-icon { color: #EA4335; }
+
+/* Responsividade: 2 colunas em telas médias, 1 coluna em telas pequenas */
+@media (max-width: 900px) {
+    .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+    .contact-grid { grid-template-columns: 1fr; }
+}
