@@ -4,22 +4,37 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 120px;
 }
+
 
 /* HEADER */
 .header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 1200px;
+
+    z-index: 1000;
+
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
     border-radius: 24px;
-    max-width: 1200px;
-    padding-top: 32px;
-    padding-bottom: 34px;
-    margin: 20px auto;
+    padding: 32px 0 34px;
+
     background-color: #18427c;
 }
+
+.header {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.50);
+}
+
 
 .header-logo {
     width: 80px;
@@ -102,13 +117,6 @@
     font-weight: 400;
     margin-top: 10px;
     letter-spacing: 2.3px;
-}
-
-/* IMPORTANTE: o header precisa permitir o dropdown "sair" */
-.header {
-    overflow: visible;
-    position: relative;
-    z-index: 10;
 }
 
 .nav-list {
@@ -205,14 +213,14 @@
 
 /* Serviços */
 .services {
-    padding: 80px 20px;
+    padding: 40px 20px;
     background-color: #fff;
 }
 
 .services-title {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: #18427c;
 }
 
@@ -229,8 +237,7 @@
     background: #ffffff;
     border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -266,7 +273,7 @@
 
 /* Sobre nos */
 .about {
-    padding: 100px 20px;
+    padding: 70px 20px;
     background-color: #f7f9fc;
 }
 
@@ -275,7 +282,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 60px;
+    gap: 40px;
     align-items: start;
 }
 
@@ -295,7 +302,7 @@
 .about-highlights ul {
     list-style: none;
     padding: 0;
-    margin: 92px;
+    margin: 40px 0 0 0;
 }
 
 .about-highlights li {
@@ -308,14 +315,14 @@
 /* Contato */
 
 .contact {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background-color: #f7f9fc;
 }
 
 .contact-title {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: #18427c;
 }
 
@@ -326,57 +333,44 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 20px;
 }
 
 .contact-card {
-    /* Card como um bloco flex vertical: ícone no topo, depois título e descrição
-       display:flex permite alinhar verticalmente e controlar espaçamento consistente */
     background: #ffffff;
     border-radius: 16px;
-    padding: 28px 20px;
+    padding: 20px;
     text-decoration: none;
-    color: #333; /* cor de texto padrão; ícone usará currentColor */
+    color: #333;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
 
-    min-height: 210px; /* garante altura consistente */
+    min-height: 180px;
 
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .contact-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 36px rgba(0,0,0,0.14);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14);
 }
 
-/* Wrapper fixo para o ícone: mantém layout estável mesmo que SVGs tenham viewBox diferentes */
 .contact-icon {
     width: 64px;
     height: 64px;
     border-radius: 12px;
-    background: #f0f4f8; /* leve fundo para destaque */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0; /* centralizado pelo flex do card */
+    margin: 0;
     flex: 0 0 auto;
-    color: #18427c; /* cor padrão do ícone (usa currentColor) */
+    color: #18427c;
 }
 
-/* Garante que qualquer SVG dentro do wrapper seja do mesmo tamanho e siga a cor via currentColor */
-.contact-icon svg {
-    width: 36px;
-    height: 36px;
-    display: block;
-}
-
-/* Alguns SVGs têm atributos de fill; esta regra força os paths a usarem currentColor
-   para que a cor seja controlada pelo CSS `.contact-card` ou `.contact-icon` */
 .contact-icon svg path,
 .contact-icon svg circle,
 .contact-icon svg rect {
@@ -385,7 +379,8 @@
 
 .contact-card h3 {
     margin: 0;
-    color: #18427c; /* título institucional */
+    color: #18427c;
+    /* título institucional */
     font-size: 18px;
 }
 
@@ -397,16 +392,137 @@
 }
 
 /* Cores por plataforma: controlam o `currentColor` dos ícones */
-.contact-card.whatsapp .contact-icon { color: #25D366; }
-.contact-card.instagram .contact-icon { color: #C13584; }
-.contact-card.facebook .contact-icon { color: #1877F2; }
-.contact-card.maps .contact-icon { color: #EA4335; }
-
-/* Responsividade: 2 colunas em telas médias, 1 coluna em telas pequenas */
-@media (max-width: 900px) {
-    .contact-grid { grid-template-columns: repeat(2, 1fr); }
+.contact-card.whatsapp .contact-icon {
+    color: #25D366;
 }
 
-@media (max-width: 520px) {
-    .contact-grid { grid-template-columns: 1fr; }
+.contact-card.instagram .contact-icon {
+    color: #C13584;
+}
+
+.contact-card.facebook .contact-icon {
+    color: #1877F2;
+}
+
+.contact-card.maps .contact-icon {
+    color: #EA4335;
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #18427c;
+    padding: 14px;
+    text-align: center;
+    color: white;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    /* BODY */
+    .body {
+        padding-top: 110px;
+    }
+
+    /* HEADER */
+    .header {
+        max-width: 95%;
+        padding: 16px 20px;
+        border-radius: 16px;
+    }
+
+    .header-logo {
+        position: static;
+        width: 60px;
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    .nav-list {
+        gap: 16px;
+        font-size: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-login {
+        position: static;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    /* HERO */
+    .hero {
+        height: 60vh;
+        margin-top: 0;
+    }
+
+    .hero-content {
+        transform: none;
+        padding: 0 20px;
+        font-size: 18px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    /* SERVICES */
+    .services {
+        padding: 50px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text h2 {
+        font-size: 26px;
+    }
+
+    .about-highlights ul {
+        margin: 0;
+    }
+
+    /* CONTACT */
+    .contact {
+        padding: 50px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        min-height: auto;
+        padding: 18px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 12px;
+        font-size: 14px;
+    }
+
 }
