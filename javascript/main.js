@@ -1,5 +1,5 @@
 /* =========================
-   ELEMENTOS
+    ELEMENTOS
 ========================= */
 
 const openLoginBtn = document.getElementById("openLogin");
@@ -7,7 +7,7 @@ const closeLoginBtn = document.getElementById("closeLogin");
 const modalOverlay = document.getElementById("loginModal");
 
 /* =========================
-   MODAL LOGIN
+    MODAL LOGIN
 ========================= */
 
 // abrir modal
@@ -34,7 +34,7 @@ modalOverlay?.querySelector("form")?.addEventListener("submit", (e) => {
 });
 
 /* =========================
-   SCROLL SUAVE (ÂNCORAS)
+    SCROLL SUAVE (ÂNCORAS)
 ========================= */
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -52,3 +52,5 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         });
     });
 });
+
+
