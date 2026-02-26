@@ -5,20 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Estadual Plinio Rodrigues de Morais</title>
-    <meta name="description" content="Escola Estadual Plínio Rodrigues de Morais (Tietê-SP). Serviços, informações e contatos. Acesso à Sala do Futuro, boletim e RA.">
+    <meta name="description"
+        content="Escola Estadual Plínio Rodrigues de Morais (Tietê-SP). Serviços, informações e contatos. Acesso à Sala do Futuro, boletim e RA.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -109,25 +101,99 @@
             </div>
         </div>
     </section>
-    <!-- DESTAQUES 
-    <section class="news">
-        <h2 class="news-title">DESTAQUES PLÍNIO</h2>
+    <!-- DESTAQUES -->
+    <!--
+    <section class="news" id="news">
+        <div class="news-container">
+            <div class="news-header">
+                <h2 class="news-title">Destaques Plínio</h2>
+                <p class="news-subtitle">Comunicados, eventos e avisos importantes.</p>
+            </div>
 
-        <div class="news-grid">
-            <article class="news-card">
-                <img src="assets/img/noticia1.jpg" alt="Notícia 1" class="news-image">
-                <h3>Notícia 1</h3>
-                <p>Descrição da notícia 1</p>
-            </article>
+            <div class="news-grid">
+                <article class="news-card">
+                    <a class="news-link" href="#" aria-label="Ver comunicado">
+                        <div class="news-media">
+                            <img src="assets/img/noticia1.jpg" alt="Reunião de Pais e Mestres" class="news-image">
+                            <span class="news-badge">Comunicado</span>
+                        </div>
 
-            <article class="news-card">
-                <img src="assets/img/noticia2.jpg" alt="Notícia 2" class="news-image">
-                <h3>Notícia 2</h3>
-                <p>Descrição da notícia 2</p>
-            </article>
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <time datetime="2026-02-20">20 fev 2026</time>
+                                <span class="news-dot" aria-hidden="true">•</span>
+                                <span>Direção</span>
+                            </div>
+
+                            <h3 class="news-card-title">Reunião de Pais e Mestres</h3>
+                            <p class="news-excerpt">
+                                Confira data, horário e orientações gerais para participação. Importante para
+                                alinhamento do trimestre.
+                            </p>
+
+                            <button class="news-cta js-news-open" type="button" data-title="Reunião de Pais e Mestres"
+                                data-date="20 fev 2026" data-from="Direção" data-badge="Comunicado" data-badge-class=""
+                                data-img="assets/img/noticia1.jpg" data-alt="Reunião de Pais e Mestres"
+                                data-text="Aqui vai o TEXTO COMPLETO do comunicado. Pode ser bem maior que o resumo."
+                                data-link="https://www.instagram.com/escolapliniotiete/">
+                                Ler mais →
+                            </button>
+                        </div>
+                    </a>
+                </article>
+            
+                <article class="news-card">
+                    <a class="news-link" href="#" aria-label="Ver evento">
+                        <div class="news-media">
+                            <img src="assets/img/noticia2.jpg" alt="Semana Cultural" class="news-image">
+                            <span class="news-badge news-badge--event">Evento</span>
+                        </div>
+
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <time datetime="2026-03-05">05 mar 2026</time>
+                                <span class="news-dot" aria-hidden="true">•</span>
+                                <span>Coordenação</span>
+                            </div>
+
+                            <h3 class="news-card-title">Semana Cultural: inscrições abertas</h3>
+                            <p class="news-excerpt">
+                                Alunos podem participar com apresentações, artes e projetos. Veja como se inscrever e os
+                                prazos.
+                            </p>
+
+                            <span class="news-cta">Ler mais →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a class="news-link" href="#" aria-label="Ver aviso">
+                        <div class="news-media">
+                            <img src="assets/img/noticia1.jpg" alt="Atualização de Horários" class="news-image">
+                            <span class="news-badge news-badge--warn">Aviso</span>
+                        </div>
+
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <time datetime="2026-02-26">26 fev 2026</time>
+                                <span class="news-dot" aria-hidden="true">•</span>
+                                <span>Secretaria</span>
+                            </div>
+
+                            <h3 class="news-card-title">Atualização de horários (turnos)</h3>
+                            <p class="news-excerpt">
+                                Mudanças pontuais em horários e salas. Consulte antes de vir para evitar desencontro.
+                            </p>
+
+                            <span class="news-cta">Ler mais →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
         </div>
-    </section> -->
-
+    </section>
+-->
     <!-- SOBRE NOS -->
     <section class="about">
         <div class="about-container">
@@ -219,6 +285,30 @@
         <p class="footer-text">© 2026 Escola Estadual Plínio Rodrigues de Morais. Criado por Fabio Luis Brizotti Filho.
         </p>
     </footer>
+    <!-- News Modal -->
+    <!--
+    <div class="modal-overlay" id="newsModal" aria-hidden="true">
+        <div class="modal modal-news" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle">
+            <button class="close-modal" id="closeNewsModal" type="button" aria-label="Fechar">×</button>
+
+            <div class="modal-news-media">
+                <img id="newsModalImg" src="" alt="" />
+                <span id="newsModalBadge" class="news-badge">Comunicado</span>
+            </div>
+
+            <div class="modal-news-body">
+                <div class="news-meta" id="newsModalMeta"></div>
+                <h2 id="newsModalTitle"></h2>
+                <p id="newsModalText"></p>
+
+                <div class="modal-news-actions">
+                    <a id="newsModalLink" class="news-modal-link" href="#" target="_blank" rel="noopener">Abrir post /
+                        link →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
 </body>
 
 </html>
