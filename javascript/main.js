@@ -35,7 +35,7 @@ modalOverlay?.querySelector("form")?.addEventListener("submit", (e) => {
 
 /* =========================
     SCROLL SUAVE (ÂNCORAS)
-========================= 
+========================= */
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", (e) => {
@@ -152,6 +152,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
             closeNewsModal();
         }
     });
-})(); */
+})(); 
 
 
